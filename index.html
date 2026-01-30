@@ -218,8 +218,8 @@
         }
 
         .placed-item img {
-            max-width: 40px;
-            max-height: 40px;
+            max-width: 80%;
+            max-height: 80%;
             object-fit: contain;
         }
 
@@ -575,19 +575,12 @@
             const placedItem = document.createElement('div');
             placedItem.className = 'placed-item';
             
-            // Copy image if it exists
+            // Copy image if it exists - ONLY show image, no text
             const img = draggedElement.querySelector('img');
             if (img) {
                 const imgClone = img.cloneNode(true);
                 placedItem.appendChild(imgClone);
             }
-            
-            // Add text
-            const textSpan = document.createElement('span');
-            textSpan.textContent = draggedElement.querySelector('span') ? 
-                draggedElement.querySelector('span').textContent : 
-                draggedElement.textContent;
-            placedItem.appendChild(textSpan);
             
             placedItem.dataset.item = itemType;
             
