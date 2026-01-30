@@ -143,43 +143,43 @@
             background: rgba(220, 53, 69, 0.1);
         }
 
-        /* Place setting positions - NOW ACTUALLY CENTERED with proper space */
+        /* Place setting positions - TIGHTENED for better visual */
         /* Center plates - truly centered vertically */
         #charger { width: 200px; height: 200px; left: 50%; top: 50%; transform: translate(-50%, -50%); }
         #dinner-plate { width: 160px; height: 160px; left: 50%; top: 50%; transform: translate(-50%, -50%); }
         
-        /* Left side - Napkin at LEFT EDGE, centered vertically */
-        #napkin { width: 70px; height: 70px; left: 1%; top: 50%; transform: translateY(-50%); }
+        /* Left side - Napkin closer in */
+        #napkin { width: 70px; height: 70px; left: 15%; top: 50%; transform: translateY(-50%); }
         
-        /* Left side - Forks beside the charger/plate (not overlapping) */
-        #salad-fork { width: 45px; height: 120px; left: 12%; top: 50%; transform: translateY(-50%); }
-        #dinner-fork { width: 45px; height: 130px; left: 20%; top: 50%; transform: translateY(-50%); }
+        /* Left side - Forks closer to center */
+        #salad-fork { width: 45px; height: 120px; left: 28%; top: 50%; transform: translateY(-50%); }
+        #dinner-fork { width: 45px; height: 130px; left: 35%; top: 50%; transform: translateY(-50%); }
         
-        /* Right side - Knife and spoons with matching spacing to forks */
-        #dinner-knife { width: 45px; height: 130px; right: 24%; top: 50%; transform: translateY(-50%); }
-        #teaspoon { width: 45px; height: 120px; right: 16%; top: 50%; transform: translateY(-50%); }
-        #soup-spoon { width: 45px; height: 120px; right: 8%; top: 50%; transform: translateY(-50%); }
+        /* Right side - Knife and spoons closer to center */
+        #dinner-knife { width: 45px; height: 130px; right: 35%; top: 50%; transform: translateY(-50%); }
+        #teaspoon { width: 45px; height: 120px; right: 28%; top: 50%; transform: translateY(-50%); }
+        #soup-spoon { width: 45px; height: 120px; right: 21%; top: 50%; transform: translateY(-50%); }
         
-        /* Top left - Bread plate (above forks with space) */
-        #bread-plate { width: 80px; height: 80px; left: 18%; top: 18%; }
+        /* Top left - Bread plate closer to center */
+        #bread-plate { width: 80px; height: 80px; left: 30%; top: 25%; }
         
-        /* Top left - Bread knife (horizontal across TOP of bread plate) */
-        #bread-knife { width: 75px; height: 25px; left: 20%; top: 16%; }
+        /* Top left - Bread knife */
+        #bread-knife { width: 75px; height: 25px; left: 31%; top: 23%; }
         
-        /* Top center - Dessert spoon (visible above plates) */
+        /* Top center - Dessert spoon */
         #dessert-spoon { 
             width: 120px; 
             height: 35px; 
             left: 50%; 
-            top: 28%; 
+            top: 32%; 
             transform: translateX(-50%);
             z-index: 10;
         }
         
-        /* Top right - Glassware MOVED UP with clear space above spoons */
-        #white-wine { width: 60px; height: 80px; right: 10%; top: 20%; }
-        #red-wine { width: 60px; height: 80px; right: 18%; top: 12%; }
-        #water-glass { width: 65px; height: 85px; right: 24%; top: 5%; }
+        /* Top right - Glassware much closer */
+        #white-wine { width: 60px; height: 80px; right: 24%; top: 28%; }
+        #red-wine { width: 60px; height: 80px; right: 30%; top: 22%; }
+        #water-glass { width: 65px; height: 85px; right: 35%; top: 16%; }
 
         .placed-item {
             position: absolute;
