@@ -136,8 +136,8 @@
         }
 
         .drop-zone.filled {
-            border: 2px solid #28a745;
-            background: rgba(40, 167, 69, 0.1);
+            border: none; /* Hide border when filled */
+            background: transparent; /* Transparent background */
         }
 
         .drop-zone.incorrect {
@@ -145,32 +145,32 @@
             background: rgba(220, 53, 69, 0.1);
         }
 
-        /* Place setting positions - TIGHTENED for better visual */
+        /* Place setting positions - SPREAD OUT MORE */
         /* Center plates - truly centered vertically */
         #charger { width: 200px; height: 200px; left: 50%; top: 50%; transform: translate(-50%, -50%); }
         #dinner-plate { width: 160px; height: 160px; left: 50%; top: 50%; transform: translate(-50%, -50%); }
         
-        /* Left side - Napkin closer in */
-        #napkin { width: 70px; height: 70px; left: 15%; top: 50%; transform: translateY(-50%); }
+        /* Left side - Napkin further out */
+        #napkin { width: 70px; height: 70px; left: 10%; top: 50%; transform: translateY(-50%); }
         
-        /* Left side - Forks closer to center */
-        #salad-fork { width: 45px; height: 120px; left: 28%; top: 50%; transform: translateY(-50%); }
-        #dinner-fork { width: 45px; height: 130px; left: 35%; top: 50%; transform: translateY(-50%); }
+        /* Left side - Forks spread out more */
+        #salad-fork { width: 45px; height: 120px; left: 23%; top: 50%; transform: translateY(-50%); }
+        #dinner-fork { width: 45px; height: 130px; left: 32%; top: 50%; transform: translateY(-50%); }
         
-        /* Right side - Knife and spoons closer to center */
-        #dinner-knife { width: 45px; height: 130px; right: 35%; top: 50%; transform: translateY(-50%); }
-        #teaspoon { width: 45px; height: 120px; right: 28%; top: 50%; transform: translateY(-50%); }
-        #soup-spoon { width: 45px; height: 120px; right: 21%; top: 50%; transform: translateY(-50%); }
+        /* Right side - Knife and spoons spread out more */
+        #dinner-knife { width: 45px; height: 130px; right: 32%; top: 50%; transform: translateY(-50%); }
+        #teaspoon { width: 45px; height: 120px; right: 23%; top: 50%; transform: translateY(-50%); }
+        #soup-spoon { width: 45px; height: 120px; right: 14%; top: 50%; transform: translateY(-50%); }
         
-        /* Top left - Bread plate closer to center */
-        #bread-plate { width: 80px; height: 80px; left: 30%; top: 32%; }
+        /* Top left - Bread plate */
+        #bread-plate { width: 80px; height: 80px; left: 25%; top: 28%; }
         
         /* Top left - Bread knife - HORIZONTAL */
         #bread-knife { 
             width: 75px; 
             height: 25px; 
-            left: 31%; 
-            top: 30%; 
+            left: 26%; 
+            top: 25%; 
         }
         
         /* Make the placed bread knife rotate too */
@@ -183,7 +183,7 @@
             width: 120px; 
             height: 35px; 
             left: 50%; 
-            top: 36%; 
+            top: 32%; 
             transform: translateX(-50%) rotate(0deg);
             z-index: 10;
         }
@@ -193,17 +193,17 @@
             transform: rotate(0deg);
         }
         
-        /* Top right - Glassware much closer */
-        #white-wine { width: 60px; height: 80px; right: 24%; top: 34%; }
-        #red-wine { width: 60px; height: 80px; right: 30%; top: 28%; }
-        #water-glass { width: 65px; height: 85px; right: 35%; top: 22%; }
+        /* Top right - Glassware spread out more */
+        #white-wine { width: 60px; height: 80px; right: 20%; top: 32%; }
+        #red-wine { width: 60px; height: 80px; right: 27%; top: 25%; }
+        #water-glass { width: 65px; height: 85px; right: 33%; top: 18%; }
 
         .placed-item {
             position: absolute;
-            background: white;
-            border: 2px solid #667eea;
+            background: transparent; /* Make background transparent */
+            border: none; /* Remove border */
             border-radius: 8px;
-            padding: 8px;
+            padding: 0; /* Remove padding */
             font-size: 0.85em;
             font-weight: 500;
             color: #333;
@@ -213,8 +213,13 @@
             justify-content: center;
             text-align: center;
             cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: none; /* Remove shadow */
             gap: 3px;
+            width: 100%; /* Fill entire drop zone */
+            height: 100%;
+            left: 0;
+            top: 0;
+            pointer-events: auto; /* Still clickable to remove */
         }
 
         .placed-item img {
